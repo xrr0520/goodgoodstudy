@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js bin</title>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js"></script> -->
+	<script src="../js/redux.js"></script>
+	<script src="../js/react.js"></script>
+	<script src="../js/react-dom.js"></script>
+	<script src="../js/browser.min.js"></script>
+	<script src="../js/react-redux.js"></script>
+	<!-- <script type="text/javascript" src="../zepto.js"></script> -->
+	<script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+	<!-- <script id="redux" src="redux-21.js"></script> -->
+	<!-- <script type="text/javascript">
+		(function main() {
+			// body...
+			alert($('#redux').attr('src'));
+			$('li').on('tap', function () {
+				var dataId = $(this).attr('data-id');
+				$('#redux').attr('src', 'redux-'+dataId+'.js');
+				// document.write('<script src="//s.bdstatic.com/common/openjs/redux-'+dataId+'.js"><\/script>');
+			});
+		})();
+	</script> -->
+
+	<!-- <script src="https://wzrd.in/standalone/expect@latest"></script>
+	<script src="https://wzrd.in/standalone/deep-freeze@latest"></script> -->
+	<style type="text/css">
+		.left {
+			float: left;
+		}
+		.lists {
+			width: 30%;
+			border-right: 1px solid #bf4444;
+			display: inline-block;
+		}
+		.lists li {
+			margin-bottom: .5rem 0;
+		}
+		.container {
+			width: 60%;
+			margin: 0 1rem;
+			height: 50rem;
+			display: inline-block;
+		}
+		#root, #code {
+			border: 1px solid blue;
+		}
+	</style>
+
+</head>
+<body>
+	<ul class="lists left">
+		<li data-id="00">redux-00</li>
+		<li data-id="01">redux-01</li>
+		<li data-id="02">redux-02</li>
+		<li data-id="03">redux-03<br>to avoid array and object mutations with concat(),slice()</li>
+		<li data-id="04">redux-04<br>reducer composition with arrays and objects</li>
+		<li data-id="05">redux-05<br>reducer composition with arrays and objects</li>
+		<li data-id="06">redux-06<br>reducer composition with arrays and objects</li>
+		<li data-id="07">redux-07<br>拆分reducer</li>
+		<li data-id="08">redux-08<br>react todo list example (adding a todo)</li>
+		<li data-id="09">redux-09<br>react todo list example(toggling a todo)</li>
+		<li data-id="10">redux-10<br>react todo list example(filtering todos)</li>
+		<li data-id="11">redux-11<br>extracting presentational components(Todo, TodoList) 抽取表现组件</li>
+		<li data-id="12">redux-12<br>extracting presentational components(AddTodo, Footer, FilterLink) 抽取表现组件</li>
+		<li data-id="13">redux-13<br>extracting container components(FilterLink) 抽取表现组件</li>
+		<li data-id="14">redux-14<br>extracting container components(visibleTodoList, AddTodo) 抽取表现组件</li>
+		<li data-id="15">redux-15<br>passing the store down explicitly via props</li>
+		<li data-id="16">redux-16<br>passing the store down implicitly via context</li>
+		<li data-id="17">redux-17<br>passing the store down with <Provider> from React Redux</li>
+		<li data-id="18">redux-18<br>generating containers with connect() from React Redux (VisibleTodoList)</li>
+		<li data-id="19">redux-19<br>generating containers with connect() from React Redux (AddTodo)</li>
+		<li data-id="20">redux-20<br>generating containers with connect() from React Redux (FooterLink)</li>
+		<li data-id="21">redux-21<br>extrating action creators</li>
+	</ul>
+
+	<iframe id="frame" class="container left" src="../html/00.html"></iframe>
+	<script type="text/javascript">
+		(function main() {
+			$('.lists li').on('click', function () {
+				var dataId = $(this).attr('data-id');
+				$('#frame').attr('src', '../html/'+dataId+'.html');
+			});
+		})();
+	</script>
+</body>
+</html>

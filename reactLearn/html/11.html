@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>js bin</title>
+	<!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/redux/3.0.4/redux.js"></script> -->
+	<script src="../js/redux.js"></script>
+	<script src="../js/react.js"></script>
+	<script src="../js/react-dom.js"></script>
+	<script src="../js/browser.min.js"></script>
+	<script src="../js/react-redux.js"></script>
+	<!-- <script type="text/javascript" src="../zepto.js"></script> -->
+	<script type="text/javascript" src="../js/jquery-3.2.1.js"></script>
+	<style type="text/css">
+		#root, #code {
+			border: 1px solid blue;
+			margin-bottom: .5rem;
+		}
+	</style>
+</head>
+<body>
+	<div id="root"></div>
+	<div id="code"></div>
+
+	<script type="text/babel" src="../js/redux-11.js"></script>
+	<script type="text/javascript">
+		(function test() {
+			$.ajax({
+			   type: "GET",
+			   url: "../js/redux-11.js",
+			   dataType: "text",
+			   success: function(rs) {
+			   		$('#code').html('<pre>'+rs+'</pre>');
+			   },
+
+			   error: function() {
+			       alert("error");
+			   }
+			});
+		})();
+	</script>
+</body>
+</html>
